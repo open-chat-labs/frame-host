@@ -1,39 +1,9 @@
-# create-svelte
+# IFrame hosted OpenChat proof of concept
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This is a proof of concept designed around the BetBase use-case. It is a site with four routes (home, dice, poker and roulette) to simulate the current design of the BetBase site.
 
-## Creating a project
+In place of the chat window, we have an iframe hosting a single instance of OpenChat.
 
-If you're seeing this, you've probably already done this step. Congrats!
+There is a small amount of code in the `frame.ts` module to manage sending and receiving messages between the host page and the OpenChat instance in the iframe.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-# frame-host
+Currently we support two messages types that can be sent to OpenChat. The first is `update_theme` which can be used to override any of the default css variables used by OpenChat so that it looks as much like the host app as possible. The second is `change_route` so that we can navigate to a route within OpenChat from the host. This is used so that when the route changes in the host app, we can load a specific channel relative to that route in the OpenChat instance.

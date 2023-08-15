@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<style>
+			body {
+				padding: 0;
+				margin: 0;
+				height: 100vh;
+				background-color: #191b1c;
+				color: #fff;
+				font-family: 'Courier New', Courier, monospace;
+			}
+			html {
+				box-sizing: border-box;
+				font-size: var(--font-size);
+				background-color: #191b1c;
+				color: #fff;
+			}
+			*,
+			*:before,
+			*:after {
+				box-sizing: inherit;
+			}
+
+			a:visited {
+				color: #fff;
+			}
+		</style>
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		%sveltekit.body%
+	</body>
+</html>
