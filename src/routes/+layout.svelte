@@ -29,4 +29,7 @@
 	.nav {
 		flex: 0 0 40px;
 	}
+	.nav a {
+		color: #fff;
+	}
 </style>
