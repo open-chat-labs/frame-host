@@ -6,7 +6,7 @@
 	<Panel size="sm">
 		<slot name="left" />
 	</Panel>
-	<Panel size="lg">
+	<Panel size="auto">
 		<slot name="right" />
 	</Panel>
 </div>

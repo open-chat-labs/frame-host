@@ -1,11 +1,13 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import Game from '../../Game.svelte';
-	import { changePath } from '../../frame';
+	import { clientStore } from '../../store';
 
 	onMount(() => {
-		changePath(
-			'/community/dlbnd-beaaa-aaaaa-qaana-cai/channel/89226699615946440445266045583032821468'
+		$clientStore.then((client) =>
+			client.changePath(
+				'/community/rfeib-riaaa-aaaar-ar3oq-cai/channel/162740522485531351121872876384540877260'
+			)
 		);
 	});
 </script>

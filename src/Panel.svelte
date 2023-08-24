@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let size: 'sm' | 'md' | 'lg' = 'md';
+	export let size: 'sm' | 'md' | 'lg' | 'auto' = 'md';
 </script>
 
 <div class={`panel ${size}`}>
@@ -8,12 +8,12 @@
 
 <style lang="css">
 	.panel {
-		background-color: #efefef;
 		flex: auto;
 	}
 
 	.panel.sm {
 		flex: 0 0 33%;
+		max-width: 700px;
 	}
 
 	.panel.md {
@@ -22,5 +22,9 @@
 
 	.panel.lg {
 		flex: 0 0 66%;
+	}
+
+	.panel.auto {
+		flex: auto;
 	}
 </style>

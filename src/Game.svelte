@@ -11,7 +11,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-color: #398e75;
+		border: 1px solid rgb(91, 243, 190);
+		border-radius: 13px;
 		color: #fff;
 		padding: 20px;
 		height: 100%;
