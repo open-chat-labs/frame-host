@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { initialise } from './frame';
 	import { clientStore } from './store';
+	import { initialise } from '@open-ic/openchat-xframe';
 
 	let iframe: HTMLIFrameElement;
 
@@ -17,7 +17,6 @@
 				initialPath:
 					'/community/rfeib-riaaa-aaaar-ar3oq-cai/channel/334961401678552956581044255076222828441',
 				theme: {
-					kind: 'update_theme',
 					name: 'betbase',
 					base: 'dark',
 					overrides: {

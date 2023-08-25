@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Frame from '../OpenChatFrame.svelte';
 	import Content from '../Content.svelte';
-	import '../frame';
 </script>
 
 <div class="layout">
