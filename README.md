@@ -4,6 +4,6 @@ This is a proof of concept designed around the BetBase use-case. It is a site wi
 
 In place of the chat window, we have an iframe hosting a single instance of OpenChat.
 
-There is a small amount of code in the `frame.ts` module to manage sending and receiving messages between the host page and the OpenChat instance in the iframe.
+We make use of the [openchat-xframe](https://github.com/open-chat-labs/openchat-xframe) library to manage the communication between the host page and the instance of OpenChat running in the iframe.
 
-Currently we support two messages types that can be sent to OpenChat. The first is `update_theme` which can be used to override any of the default css variables used by OpenChat so that it looks as much like the host app as possible. The second is `change_route` so that we can navigate to a route within OpenChat from the host. This is used so that when the route changes in the host app, we can load a specific channel relative to that route in the OpenChat instance.
+The library allows us to set an initial theme and to change path which is all we need in this case.
